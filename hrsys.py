@@ -141,7 +141,9 @@ class DBOperations:
                 print("no table is found")
             else:
                 for record in results:
-                    print(record)
+                    for column in record:
+                        print(column,"|",end="")
+                    print("\n","----------------------------------------")
         except Exception as e:
             print(e)
         finally:
