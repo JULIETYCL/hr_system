@@ -8,7 +8,7 @@ while True:
     print(" 1. Create table Employee")
     print(" 2. Insert single record into Employee")
     print(" 3. Bulk insert records into Employee")
-    print(" 4. Display all employees from EmployeeUoB")
+    print(" 4. Display all employees from Employee")
     print(" 5. Search an employee")
     print(" 6. Update a single record")
     print(" 7. Delete a single record")

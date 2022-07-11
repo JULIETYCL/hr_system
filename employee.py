@@ -1,3 +1,4 @@
+import re
 
 class Employee:
     def __init__(self):
@@ -21,7 +22,14 @@ class Employee:
         self.surname = surname
 
     def set_email(self, email):
-        self.email = email
+        validation =False
+        while validation == False:
+            valid_email = re.findall('\S+@\S+\.+[a-zA-Z]*',email)
+            if len(valid_email)==0: 
+                email = input("Enter valid Employee email: ")
+            else:
+                self.email = email     
+                validation = True
 
     def set_salary(self, salary):
         self.salary = salary

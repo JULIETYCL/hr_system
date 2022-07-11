@@ -1,5 +1,6 @@
 import employee
 import sqlite3
+import re
 
 class DBOperations:
 
@@ -78,7 +79,7 @@ class DBOperations:
             emp.set_employee_title(input("Enter Employee title: "))
             emp.set_forename(input("Enter Employee forename: "))
             emp.set_surname(input("Enter Employee surname: "))
-            emp.set_email(input("Enter Employee email: "))
+            emp.set_email(input("Enter Employee email: "))   
             emp.set_salary(float(input("Enter Employee salary: ")))
 
             self.cur.execute(self.sql_insert,
@@ -143,7 +144,7 @@ class DBOperations:
                 for record in results:
                     for column in record:
                         print(column,"|",end="")
-                    print("\n","----------------------------------------")
+                    print("\n","-----------------------------------------")
         except Exception as e:
             print(e)
         finally:
