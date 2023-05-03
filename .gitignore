@@ -1,0 +1,4 @@
+  GNU nano 5.9                                 .gitignore
+__pycache__/
+hrenv/
+
